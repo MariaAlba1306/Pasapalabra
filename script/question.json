@@ -1,7 +1,34 @@
 {
-  "question": {
-    "word": "A",
-    "question":"Planta comestible con tallos blancos y hojas verdes. También está en la ducha.",
-    "response": "alcachofa"
-  }
+  "question": [
+    {
+      "word": "A",
+      "question": "Planta comestible con tallos blancos y hojas verdes. También está en la ducha.",
+      "response": "alcachofa"
+    },
+    {
+      "word": "B",
+      "question": "También está en la ducha.",
+      "response": "B"
+    },
+    {
+      "word": "C",
+      "question": "PreguntaC",
+      "response": "C"
+    },
+    {
+      "word": "D",
+      "question": "PreguntaD",
+      "response": "D"
+    },
+    {
+      "word": "E",
+      "question": "PreguntaE",
+      "response": "E"
+    },
+    {
+      "word": "F",
+      "question": "PreguntaF",
+      "response": "F"
+    }
+  ]
 }
