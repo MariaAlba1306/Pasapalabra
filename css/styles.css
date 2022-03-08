@@ -1,0 +1,9 @@
+.correct {
+  display: none;
+  width: 20px;
+}
+
+.incorrect {
+  display: none;
+  width: 20px;
+}
