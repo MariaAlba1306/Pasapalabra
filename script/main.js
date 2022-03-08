@@ -1,44 +1,46 @@
-//Connect Json with HTML
+//Declare global vars for facilitate accesibility
+var questions = [];
+var actualQuestion;
+var actualWord;
+var actualResponse;
 
-fetch("question.json")
+fetchQuestions();
+
+function fetchQuestions() {
+  //retrieve json question
+  fetch("./script/question.json")
   .then((response) => response.json())
   .then((data) => {
-    document.querySelector("#word").innerText = data.questionA.word;
+    questions = data;
+    initValues();
   });
-
-fetch("question.json")
-  .then((response) => response.json())
-  .then((data) => {
-    document.querySelector("#question").innerText = data.questionA.questions[0];
-  });
-
-//Get responses from JSON
-function getvals(hi) {
-  return fetch("question.json")
-    .then((response) => response.json())
-    .then((responseData) => {
-      return responseData.questionA.response;
-    });
 }
-let correctAnswer;
-getvals().then((response) => (correctAnswer = "respuesta es" + response));
 
-console.log(correctAnswer);
-//Fill text box
-function myFunction() {
-  let response = document.getElementById("myText").value;
-  if (response === "") {
-    (response = "no response"), console.log(correctAnswer);
-  } else {
-    return response, console.log(response);
+function initValues() {
+  //refresh global variables
+  actualQuestion = questions.question.question
+  actualWord = questions.question.word;
+  actualResponse = questions.question.response;
+
+  //set global vars values onto html
+  document.querySelector("#word").innerText = actualWord
+  document.querySelector("#question").innerText = actualQuestion;
+}
+
+//Get user response
+function getUserResponse() {
+  var response = document.getElementById("myText").value;
+  if (response.length > 0) {
+   return response;
   }
 }
 
-//Compare both responses
-function resultado() {
-  if (myFunction() === correctAnswer) {
+//Compare both responses when clicks
+function checkResults() {
+  var userResponse = getUserResponse();
+  if (userResponse === actualResponse) {
     console.log("correcto");
   } else {
-    console.log("nocorrecto");
+    console.log("no correcto o no contestado");
   }
 }
