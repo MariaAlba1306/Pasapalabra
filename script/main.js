@@ -27,20 +27,24 @@ function initValues() {
   document.querySelector("#word").innerText = actualWord;
   document.querySelector("#question").innerText = actualQuestion;
 }
-
+function sum() {
+  StartingQuestion++;
+  console.log(StartingQuestion);
+}
 function NextQuestion() {
   var NumberofQuestions = questions.question.length;
+  StartingQuestion;
+  document.querySelector(`#${imgCorrect}`).style.display = "none";
+  document.querySelector(`#${imgIncorrect}`).style.display = "none";
 
-  for (var i = 0; i < NumberofQuestions; i++) {
-    //refresh global variables
-    actualQuestion = questions.question[i].question;
-    actualWord = questions.question[i].word;
-    actualResponse = questions.question[i].response;
-  }
-  console.log("value of i : ", i);
-  //set global vars values onto html
+  //refresh global variables
+  actualQuestion = questions.question[StartingQuestion].question;
+  actualWord = questions.question[StartingQuestion].word;
+  actualResponse = questions.question[StartingQuestion].response;
   document.querySelector("#word").innerText = actualWord;
   document.querySelector("#question").innerText = actualQuestion;
+
+  //set global vars values onto html
 }
 
 //Get user response
@@ -63,11 +67,14 @@ function checkResults() {
     //Appear img if correct/incorrect
     document.querySelector(`#${imgCorrect}`).style.display = "flex";
     document.querySelector(`#${imgIncorrect}`).style.display = "none";
-    NextQuestion();
+    document.getElementById("myText").value = "";
+    sum();
+    setTimeout(NextQuestion, 750);
   } else {
     console.log("no correcto o no contestado");
     //Appear img if correct/incorrect
     document.querySelector(`#${imgIncorrect}`).style.display = "flex";
     document.querySelector(`#${imgCorrect}`).style.display = "none";
+    document.getElementById("myText").value = "";
   }
 }

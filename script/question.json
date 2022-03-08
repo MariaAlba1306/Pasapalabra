@@ -7,23 +7,23 @@
     },
     {
       "word": "B",
-      "question": "También está en la ducha.",
-      "response": "B"
+      "question": "Caja en la que se guardan medicinas.",
+      "response": "botiquín"
     },
     {
       "word": "C",
-      "question": "PreguntaC",
-      "response": "C"
+      "question": "Cama en la que se llevan de un lado a otro heridos o enfermos.",
+      "response": "camilla"
     },
     {
       "word": "D",
-      "question": "PreguntaD",
-      "response": "D"
+      "question": "Palabras que se escriben y se dicen como regalo a alguien.",
+      "response": "dedicatoria"
     },
     {
       "word": "E",
-      "question": "PreguntaE",
-      "response": "E"
+      "question": "Mancharse un cristal con el vapor de agua.",
+      "response": "empañar"
     },
     {
       "word": "F",
