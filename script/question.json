@@ -3,7 +3,8 @@
     {
       "word": "A",
       "question": "Planta comestible con tallos blancos y hojas verdes. También está en la ducha.",
-      "response": "alcachofa"
+      "response": "alcachofa",
+      "answer": ""
     },
     {
       "word": "B",
@@ -28,7 +29,7 @@
     {
       "word": "F",
       "question": "PreguntaF",
-      "response": "F"
+      "response": "feo"
     }
   ]
 }
