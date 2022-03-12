@@ -6,8 +6,8 @@ var actualWord;
 var actualResponse;
 
 //variadito
-var StartingQuestion = 0;
-var Startinganswer = 0;
+var startingQuestion = 0;
+var startingAnswer = 0;
 var endQuestion = 6;
 
 //Images correct/incorrect
@@ -42,18 +42,18 @@ function fetchQuestions() {
 }
 function initValues() {
   //refresh global variables
-  actualQuestion = questions.question[StartingQuestion].question;
-  actualWord = questions.question[StartingQuestion].word;
-  actualResponse = questions.question[StartingQuestion].response;
+  actualQuestion = questions.question[startingQuestion].question;
+  actualWord = questions.question[startingQuestion].word;
+  actualResponse = questions.question[startingQuestion].response;
 
   //set global vars values onto html
   document.querySelector("#word").innerText = actualWord;
   document.querySelector("#question").innerText = actualQuestion;
   questionNumber();
-  console.log("pregunta nº ", StartingQuestion);
-  console.log("respuesta nº ", StartingQuestion);
+  console.log("pregunta nº ", startingQuestion);
+  console.log("respuesta nº ", startingQuestion);
 
-  roundAnswers.push(questions.question[Startinganswer].word);
+  roundAnswers.push(questions.question[startingAnswer].word);
   console.log(roundAnswers);
 }
 
@@ -82,10 +82,10 @@ function checkResults() {
     document.querySelector(`#${imgIncorrect}`).style.display = "none";
 
     //Add number to question count to go to next question
-    if (!correctAnswers.includes(questions.question[Startinganswer].word)) {
-      correctAnswers.push(questions.question[Startinganswer].word);
+    if (!correctAnswers.includes(questions.question[startingAnswer].word)) {
+      correctAnswers.push(questions.question[startingAnswer].word);
     }
-    roundAnswers.correctAnswers.push(questions.question[Startinganswer].word);
+    roundAnswers.correctAnswers.push(questions.question[startingAnswer].word);
     console.log(roundAnswers.correctAnswers);
     console.log("correct:", correctAnswers);
 
@@ -97,8 +97,8 @@ function checkResults() {
     document.querySelector(`#${imgIncorrect}`).style.display = "flex";
     document.querySelector(`#${imgCorrect}`).style.display = "none";
 
-    if (!nullAnswers.includes(questions.question[Startinganswer].word)) {
-      nullAnswers.push(questions.question[Startinganswer].word);
+    if (!nullAnswers.includes(questions.question[startingAnswer].word)) {
+      nullAnswers.push(questions.question[startingAnswer].word);
     }
     console.log("null:", nullAnswers);
 
@@ -106,8 +106,8 @@ function checkResults() {
   } else {
     console.log("respuesta incorrecta:", userResponse);
 
-    if (!incorrectAnswers.includes(questions.question[Startinganswer].word)) {
-      incorrectAnswers.push(questions.question[Startinganswer].word);
+    if (!incorrectAnswers.includes(questions.question[startingAnswer].word)) {
+      incorrectAnswers.push(questions.question[startingAnswer].word);
     }
     console.log("incorrect:", incorrectAnswers);
     //Appear img if correct/incorrect
@@ -118,53 +118,48 @@ function checkResults() {
   document.getElementById("myText").value = "";
 
   //Add time for next question
-  setTimeout(NextQuestion, 750);
+  setTimeout(nextQuestion, 750);
 
   gatheringresults();
   finalCheck();
 }
 //4. Goes to next question
 
-function NextQuestion() {
+function nextQuestion() {
   //Next question functiom
   var NumberofQuestions = questions.question.length;
   questionNumber();
   //Delete img for next question
   document.querySelector(`#${imgCorrect}`).style.display = "none";
   document.querySelector(`#${imgIncorrect}`).style.display = "none";
-  //if (StartingQuestion === 6) {
 
-  // } else {
-
-  //refresh global variables
-  actualQuestion = questions.question[StartingQuestion].question;
-  actualWord = questions.question[StartingQuestion].word;
-  actualResponse = questions.question[StartingQuestion].response;
+  actualQuestion = questions.question[startingQuestion].question;
+  actualWord = questions.question[startingQuestion].word;
+  actualResponse = questions.question[startingQuestion].response;
   //set global vars values onto html
   document.querySelector("#word").innerText = actualWord;
   document.querySelector("#question").innerText = actualQuestion;
-  // }
 }
 
 //FINAL CHECK AND RESTART
 
 function gatheringresults() {
   userResponse = getUserResponse();
-  StartingQuestion;
+  startingQuestion;
   // gathering results
   if (userResponse === actualResponse) {
-    Startinganswer++;
-    StartingQuestion++;
+    startingAnswer++;
+    startingQuestion++;
   } else if (userResponse === "no_answer") {
-    StartingQuestion++;
-    Startinganswer++;
+    startingQuestion++;
+    startingAnswer++;
   } else {
-    StartingQuestion++;
-    Startinganswer++;
+    startingQuestion++;
+    startingAnswer++;
   }
   reload();
-  console.log("Pregunta nº ", StartingQuestion);
-  console.log("respuesta nº ", Startinganswer);
+  console.log("Pregunta nº ", startingQuestion);
+  console.log("respuesta nº ", startingAnswer);
 }
 
 function finalCheck() {
@@ -182,13 +177,13 @@ function finalCheck() {
 }
 
 function questionNumber() {
-  document.querySelector("#questionnumber").innerText = StartingQuestion + 1;
+  document.querySelector("#questionNumber").innerText = startingQuestion + 1;
 }
 
 function reload() {
-  if (StartingQuestion === endQuestion) {
-    StartingQuestion = 0;
-    Startinganswer = 0;
+  if (startingQuestion === endQuestion) {
+    startingQuestion = 0;
+    startingAnswer = 0;
     round++;
   }
 }
