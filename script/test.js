@@ -15,7 +15,6 @@ var imgCorrect = "correct";
 var imgIncorrect = "incorrect";
 var item = "item";
 var wordResult = "wordResult";
-var correctResponse = "correctResponse";
 //Button display
 var check = "check";
 
@@ -143,9 +142,6 @@ function checkResults() {
   }
   //Delete user's response for next question
   document.getElementById("myText").value = "";
-  //shows correct response
-  document.querySelector("#correctResponse").innerText =
-    "La respuesta era " + actualResponse;
 
   //Add time for next question
   setTimeout(nextQuestion, 750);
@@ -159,8 +155,9 @@ function nextQuestion() {
   //Next question functiom
   var NumberofQuestions = questions.question.length;
   questionNumber();
-  //Delete correct response for next question
-  document.querySelector(`#${correctResponse}`).innerText = "";
+  //Delete img for next question
+  document.querySelector(`#${imgCorrect}`).style.display = "none";
+  document.querySelector(`#${imgIncorrect}`).style.display = "none";
 
   actualQuestion = questions.question[startingQuestion].question;
   actualWord = questions.question[startingQuestion].word;
