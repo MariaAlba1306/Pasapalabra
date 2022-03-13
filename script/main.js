@@ -140,12 +140,12 @@ function checkResults() {
 
     document.querySelector(`#${item}`).classList.remove("item");
     document.querySelector(`#${item}`).classList.add("item--failure");
+    //shows correct response
+    document.querySelector("#correctResponse").innerText =
+      "La respuesta era " + actualResponse;
   }
   //Delete user's response for next question
   document.getElementById("myText").value = "";
-  //shows correct response
-  document.querySelector("#correctResponse").innerText =
-    "La respuesta era " + actualResponse;
 
   //Add time for next question
   setTimeout(nextQuestion, 750);
