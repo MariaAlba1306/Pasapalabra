@@ -14,9 +14,9 @@
     },
     {
       "word": "C",
-      "question": "Cama en la que se llevan de un lado a otro heridos o enfermos.",
+      "question": "+Cama en la que se llevan de un lado a otro heridos o enfermos.",
       "response": "camilla",
-      "result": 0
+      "result": 1
     },
     {
       "word": "D",
