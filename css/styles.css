@@ -1,9 +1,44 @@
+@font-face {
+  font-family: "Wallie";
+  src: url("https://d22j03ecumputt.cloudfront.net/fonts/Wallie-Fit.woff2")
+      format("woff2"),
+    url("//d22j03ecumputt.cloudfront.net/fonts/Wallie-Fit.woff") format("woff"),
+    url("//d22j03ecumputt.cloudfront.net/fonts/Wallie-Fit.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Wallie";
+  src: url("https://d22j03ecumputt.cloudfront.net/fonts/Wallie-Chunky.woff2")
+      format("woff2"),
+    url("//d22j03ecumputt.cloudfront.net/fonts/Wallie-Chunky.woff")
+      format("woff"),
+    url("//d22j03ecumputt.cloudfront.net/fonts/Wallie-Chunky.ttf")
+      format("truetype");
+  font-weight: bold;
+}
+.pasapalabra {
+  padding-top: 10%;
+  background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+}
 .startGame {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: #004b8d;
+
   color: white;
+  font-family: "Wallie";
+  background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/logo-borde.png");
+  background-repeat: no-repeat;
+  background-size: 50em;
+  background-position: center;
+  background-position: top;
+}
+.startGame_title {
+  padding-top: 100px;
 }
 button {
   background-color: white;
@@ -11,6 +46,7 @@ button {
   border-radius: 50px;
   padding: 10px;
   border: #fff;
+  font-family: "Wallie";
 }
 .modal {
   width: 100%;
