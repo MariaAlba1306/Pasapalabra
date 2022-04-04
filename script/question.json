@@ -32,8 +32,122 @@
     },
     {
       "word": "F",
-      "question": "PreguntaF",
-      "response": "feo",
+      "question": "Cuento en el que los personajes son animales, con el que se aprende algo através de una moraleja.",
+      "response": "Fábula",
+      "result": 0
+    },
+    {
+      "word": "G",
+      "question": "Preparar alimentos cocinándolos con calor.",
+      "response": "Guisar",
+      "result": 0
+    },
+    {
+      "word": "H",
+      "question": "Tela resistente que se cuelga de sus extremos y se utiliza como cama.",
+      "response": "Hamaca",
+      "result": 0
+    },
+    {
+      "word": "I",
+      "question": "Alfiler que se abrocha quedando su punta dentro de un gancho.",
+      "response": "Imperdible",
+      "result": 0
+    },
+    {
+      "word": "J",
+      "question": "Persona que monta a caballo.",
+      "response": "Jinete",
+      "result": 0
+    },
+    {
+      "word": "K",
+      "question": "Diversión consistente en interpretar una canción grabada, mientras se sigue la letra que aparece en una pantalla",
+      "response": "Karaoke",
+      "result": 0
+    },
+    {
+      "word": "L",
+      "question": "Mueble formado por dos camas puestas una encima de la otra.",
+      "response": "Litera",
+      "result": 0
+    },
+    {
+      "word": "M",
+      "question": "Salsa que se hace batiendo huevo y aceite.",
+      "response": "Mayonesa",
+      "result": 0
+    },
+    {
+      "word": "N",
+      "question": "Parte posterior de la cabeza situada encima del cuello.",
+      "response": "Nuca",
+      "result": 0
+    },
+    {
+      "word": "O",
+      "question": "Borde del mar, de un lago o de un río.",
+      "response": "Orilla",
+      "result": 0
+    },
+    {
+      "word": "P",
+      "question": "Quitar las arrugar a una prenda.",
+      "response": "Planchar",
+      "result": 0
+    },
+    {
+      "word": "Q",
+      "question": "Producto natural o preparado que sirve para quitar manchas",
+      "response": "Quitamanchas",
+      "result": 0
+    },
+    {
+      "word": "R",
+      "question": "Conjunto de uvas sostenidas en un mismo tallo.",
+      "response": "Racimo",
+      "result": 0
+    },
+    {
+      "word": "S",
+      "question": "Enterrar semillas en la tierra para que crezcan.",
+      "response": "Sembrar",
+      "result": 0
+    },
+    {
+      "word": "T",
+      "question": "Asiento sin respaldo",
+      "response": "Taburete",
+      "result": 0
+    },
+    {
+      "word": "U",
+      "question": "Extender mantequilla sobre una rebanada de pan",
+      "response": "Untar",
+      "result": 0
+    },
+    {
+      "word": "V",
+      "question": "Persona que vive en el mismo barrio o edificio que otra.",
+      "response": "Vecino",
+      "result": 0
+    },
+    {
+      "word": "X",
+      "question": "(Contiene la x) Ave fabulosa que los antiguos creyeron que era única y renacía de sus cenizas.",
+      "response": "Fénix",
+      "result": 0
+    },
+    {
+      "word": "Y",
+      "question": "Hueso que se encuentra dentro del oído, situado entre el martillo y el estribo.",
+      "response": "Yuste",
+      "result": 0
+    },
+    {
+      "word": "Z",
+      "question": "Sonido que producen algunos insectos como la abeja o el mosquito.",
+      "response": "Zumbido",
       "result": 0
     }
   ]
