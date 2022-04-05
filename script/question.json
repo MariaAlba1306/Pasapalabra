@@ -33,121 +33,121 @@
     {
       "word": "F",
       "question": "Cuento en el que los personajes son animales, con el que se aprende algo através de una moraleja.",
-      "response": "Fábula",
+      "response": "fábula",
       "result": 0
     },
     {
       "word": "G",
       "question": "Preparar alimentos cocinándolos con calor.",
-      "response": "Guisar",
+      "response": "guisar",
       "result": 0
     },
     {
       "word": "H",
       "question": "Tela resistente que se cuelga de sus extremos y se utiliza como cama.",
-      "response": "Hamaca",
+      "response": "hamaca",
       "result": 0
     },
     {
       "word": "I",
       "question": "Alfiler que se abrocha quedando su punta dentro de un gancho.",
-      "response": "Imperdible",
+      "response": "imperdible",
       "result": 0
     },
     {
       "word": "J",
       "question": "Persona que monta a caballo.",
-      "response": "Jinete",
+      "response": "jinete",
       "result": 0
     },
     {
       "word": "K",
       "question": "Diversión consistente en interpretar una canción grabada, mientras se sigue la letra que aparece en una pantalla",
-      "response": "Karaoke",
+      "response": "karaoke",
       "result": 0
     },
     {
       "word": "L",
       "question": "Mueble formado por dos camas puestas una encima de la otra.",
-      "response": "Litera",
+      "response": "litera",
       "result": 0
     },
     {
       "word": "M",
       "question": "Salsa que se hace batiendo huevo y aceite.",
-      "response": "Mayonesa",
+      "response": "mayonesa",
       "result": 0
     },
     {
       "word": "N",
       "question": "Parte posterior de la cabeza situada encima del cuello.",
-      "response": "Nuca",
+      "response": "nuca",
       "result": 0
     },
     {
       "word": "O",
       "question": "Borde del mar, de un lago o de un río.",
-      "response": "Orilla",
+      "response": "orilla",
       "result": 0
     },
     {
       "word": "P",
       "question": "Quitar las arrugar a una prenda.",
-      "response": "Planchar",
+      "response": "planchar",
       "result": 0
     },
     {
       "word": "Q",
       "question": "Producto natural o preparado que sirve para quitar manchas",
-      "response": "Quitamanchas",
+      "response": "quitamanchas",
       "result": 0
     },
     {
       "word": "R",
       "question": "Conjunto de uvas sostenidas en un mismo tallo.",
-      "response": "Racimo",
+      "response": "racimo",
       "result": 0
     },
     {
       "word": "S",
       "question": "Enterrar semillas en la tierra para que crezcan.",
-      "response": "Sembrar",
+      "response": "sembrar",
       "result": 0
     },
     {
       "word": "T",
       "question": "Asiento sin respaldo",
-      "response": "Taburete",
+      "response": "taburete",
       "result": 0
     },
     {
       "word": "U",
       "question": "Extender mantequilla sobre una rebanada de pan",
-      "response": "Untar",
+      "response": "untar",
       "result": 0
     },
     {
       "word": "V",
       "question": "Persona que vive en el mismo barrio o edificio que otra.",
-      "response": "Vecino",
+      "response": "vecino",
       "result": 0
     },
     {
       "word": "X",
       "question": "(Contiene la x) Ave fabulosa que los antiguos creyeron que era única y renacía de sus cenizas.",
-      "response": "Fénix",
+      "response": "fénix",
       "result": 0
     },
     {
       "word": "Y",
       "question": "Hueso que se encuentra dentro del oído, situado entre el martillo y el estribo.",
-      "response": "Yuste",
+      "response": "yuste",
       "result": 0
     },
     {
       "word": "Z",
       "question": "Sonido que producen algunos insectos como la abeja o el mosquito.",
-      "response": "Zumbido",
+      "response": "zumbido",
       "result": 0
     }
   ]

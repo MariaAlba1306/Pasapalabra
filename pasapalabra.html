@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+X<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,11 +17,12 @@ x<!DOCTYPE html>
             <button onclick="InitialModal()">Empezar</button>
       </div>
       <div class="modal" id="modal">
-        <p>¡Has acabado!</p>
+        <title class="modal_title" style="padding-top: 1000px;">¡Has acabado!</title>
         <h2 class="" id="round"></h2>
-        <p class="" id="responsesok"></p>
-        <p class="" id="responsesnull"></p>
-        <p class="" id="responsesbad"></p>  
+          <p class="" id="responsesok"></p>
+          <p class="" id="responsesnull"></p>
+          <p class="" id="responsesbad"></p> 
+           <button onclick="restart()">Repetir</button> 
       </div>
       <div class="game" id="game">
         <h1 class="startGame_title" id="welcome"></h1>
@@ -57,11 +58,13 @@ x<!DOCTYPE html>
             <li class="item"id="itemY">Y</li>
             <li class="item"id="itemZ">Z</li>
           </ul>
+          
         </div>
       <div class="form">
         <input type="text" id="myText" class="responseBox" >
         <button onclick="checkResults()" class="responseButton">Enviar</button>
       </div>
+      <p class="question" id="correctResponseValue"></p>
     </div>
   </body>
 </html>

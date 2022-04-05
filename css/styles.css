@@ -69,9 +69,21 @@ h3 {
 }
 /*Final landing*/
 .modal {
-  width: 100%;
+  color: white;
   text-align: center;
   display: none;
+  padding-top: 120px;
+  text-align: center;
+  font-family: "Wallie";
+  background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/logo-borde.png");
+  background-repeat: no-repeat;
+  background-size: 70em;
+  background-position: center;
+  background-position: top;
+}
+.modal_title {
+  padding-top: 120px;
+  color: red;
 }
 /*Rosco screen*/
 

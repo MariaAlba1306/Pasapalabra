@@ -196,11 +196,12 @@ function finalCheck() {
   //Number of final results
 
   document.querySelector("#responsesok").innerText =
-    "correctas:" + correctAnswers;
-  document.querySelector("#responsesnull").innerText = "null:" + nullAnswers;
+    "Respuestas correctas:" + correctAnswers;
+  document.querySelector("#responsesnull").innerText =
+    "Respuestas vacías:" + nullAnswers;
   document.querySelector("#responsesbad").innerText =
-    "incorrectas:" + incorrectAnswers;
-  document.querySelector("#round").innerText = "round:" + round;
+    "Respuestas incorrectas:" + incorrectAnswers;
+  document.querySelector("#round").innerText = "Número de rondas:" + round;
 }
 
 function questionNumber() {

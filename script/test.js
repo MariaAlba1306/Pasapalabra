@@ -10,31 +10,27 @@ var actualResult;
 var restantQuestion;
 var pregunta;
 
-//variadito
+//  Question values
 var startingQuestion = 0;
-var numberOfQuestions;
-var endingQuestion;
+var endingQuestion = 2;
 
-//Images correct/incorrect
-var imgCorrect = "correct";
-var imgIncorrect = "incorrect";
+//Letters correct/incorrect
 var item = "item";
-var wordResult = "wordResult";
 //Button display
-var check = "check";
 
-//Round
-var round = 1;
 //Final answers
+var round = 1;
 var incorrectAnswers = 0;
 var nullAnswers = 0;
 var correctAnswers = 0;
 
 //STEPS
+//1. First screen
+
 function InitialModal() {
   userName = document.getElementById("name").value;
   if (userName == "") {
-    alert("Nombre obligatorio");
+    alert("Por favor, inserta tu nombre, ¡queremos saber quién eres!");
   } else {
     document.querySelector("#startGame").style.display = "none";
     document.querySelector("#game").style.display = "block";
@@ -42,9 +38,8 @@ function InitialModal() {
   document.querySelector("#welcome").innerText = "Bienvenido, " + userName;
 }
 
-//1. Execute the lookup in JSON
+//2. Execute the lookup in JSON
 fetchQuestions();
-// ---> Functions
 function fetchQuestions() {
   //retrieve json question
   fetch("./script/question.json")
@@ -53,17 +48,14 @@ function fetchQuestions() {
       questions = data;
       showQuestion();
     });
-
-  // var filteredResults = questions.filter(function (entry) {
-  //   entry.question.word == "A";
-  // });
-  // console.log(filteredResults);
 }
 
-//2. Get user Response when clicking in send
+//3. Get user Response when clicking in send
 function getUserResponse() {
   //Get user response
   var response = document.getElementById("myText").value;
+  console.log(response);
+
   if (response.length > 0) {
     return response.toLowerCase();
   } else {
@@ -71,7 +63,7 @@ function getUserResponse() {
   }
 }
 
-//3. Check user answer with results
+//4. Check user answer with results
 function checkResults() {
   //Compare both responses when clicks
   var userResponse = getUserResponse();
@@ -85,11 +77,13 @@ function checkResults() {
   } else {
     incorrectResponse();
   }
-  //Delete user's response for next question
+  //Delete user's response for next question and change color
   changeColor();
   document.getElementById("myText").value = "";
   document.querySelector(`#${item}`).classList.remove("item--null");
 
+  document.querySelector("#correctResponseValue").innerText =
+    "La respuesta correcta es " + actualResponse;
   //Add time for next question
   setTimeout(nextQuestion, 750);
 }
@@ -97,6 +91,7 @@ function correctResponse() {
   getUserResponse();
   questions.question[startingQuestion].result = 1;
   correctAnswers = correctAnswers + 1;
+  console.log();
 
   //Change letter color
 
@@ -108,7 +103,6 @@ function correctResponse() {
   //Add number to question count to go to next question
 }
 function blankResponse() {
-  console.log(startingQuestion);
   getUserResponse();
   //  questions.question[startingQuestion].result = 0;
   questions.question[startingQuestion].result = 0;
@@ -122,7 +116,7 @@ function incorrectResponse() {
   incorrectAnswers = incorrectAnswers + 1;
 }
 
-//4. Goes to next question
+//5. Goes to next question || shows actual one
 function reload() {
   // if (isAllQuestionsAnswered() == false) {
   startingQuestion = 0;
@@ -147,18 +141,21 @@ function changeColor() {
 }
 
 function nextQuestion() {
+  setTimeout(
+    (document.querySelector("#correctResponseValue").innerText = ""),
+    1000
+  );
   if (startingQuestion == endingQuestion - 1) {
     reload();
   } else {
     startingQuestion++;
-    console.log(`#${item}`);
   }
   showQuestion();
 }
 function showQuestion() {
-  console.log(startingQuestion);
   actualResult = questions.question[startingQuestion].result;
-  endingQuestion = questions.question.length;
+  // endingQuestion = questions.question.length;
+  console.log(actualResponse);
   isAllQuestionsAnswered();
 
   if (actualResult == 0) {
@@ -178,13 +175,10 @@ function showQuestion() {
   //set global vars values onto html
   document.querySelector("#question").innerText = actualQuestion;
 }
-
-//FINAL CHECK AND RESTART
 function isAllQuestionsAnswered() {
   var answeredQuestion = questions.question.filter(function (question) {
     return question.result != 0;
   });
-  console.log(answeredQuestion.length);
   // answeredQuestion == completed responses
   if (answeredQuestion.length == endingQuestion) {
     return true;
@@ -192,6 +186,9 @@ function isAllQuestionsAnswered() {
     return false;
   }
 }
+
+//Timer
+
 function startTimer(duration, display) {
   var timer = duration,
     minutes,
@@ -213,19 +210,25 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-  var fiveMinutes = 60 * 1,
+  var fiveMinutes = 60 * 30,
     display = document.querySelector("#time");
   startTimer(fiveMinutes, display);
 };
 
+//6. Final screen
 function summary() {
   document.querySelector("#game").style.display = "none";
   document.querySelector("#modal").style.display = "block";
 
   document.querySelector("#responsesok").innerText =
-    "correctas:" + correctAnswers;
-  document.querySelector("#responsesnull").innerText = "null:" + nullAnswers;
+    "Respuestas correctas: " + correctAnswers;
+  document.querySelector("#responsesnull").innerText =
+    "Respuestas vacías: " + nullAnswers;
   document.querySelector("#responsesbad").innerText =
-    "incorrectas:" + incorrectAnswers;
-  document.querySelector("#round").innerText = "round:" + round;
+    "Respuestas incorrectas: " + incorrectAnswers;
+  document.querySelector("#round").innerText = "Número de rondas:" + round;
+}
+
+function restart() {
+  document.location.reload(true);
 }
