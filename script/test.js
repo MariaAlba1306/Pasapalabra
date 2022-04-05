@@ -54,7 +54,6 @@ function fetchQuestions() {
 function getUserResponse() {
   //Get user response
   var response = document.getElementById("myText").value;
-  console.log(response);
 
   if (response.length > 0) {
     return response.toLowerCase();
@@ -91,7 +90,6 @@ function correctResponse() {
   getUserResponse();
   questions.question[startingQuestion].result = 1;
   correctAnswers = correctAnswers + 1;
-  console.log();
 
   //Change letter color
 
@@ -155,7 +153,7 @@ function nextQuestion() {
 function showQuestion() {
   actualResult = questions.question[startingQuestion].result;
   // endingQuestion = questions.question.length;
-  console.log(actualResponse);
+
   isAllQuestionsAnswered();
 
   if (actualResult == 0) {
