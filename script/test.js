@@ -12,7 +12,7 @@ var pregunta;
 
 //  Question values
 var startingQuestion = 0;
-var endingQuestion = 2;
+var endingQuestion;
 
 //Letters correct/incorrect
 var item = "item";
@@ -35,7 +35,6 @@ function InitialModal() {
     document.querySelector("#startGame").style.display = "none";
     document.querySelector("#game").style.display = "block";
   }
-  document.querySelector("#welcome").innerText = "Bienvenido, " + userName;
 }
 
 //2. Execute the lookup in JSON
@@ -152,7 +151,7 @@ function nextQuestion() {
 }
 function showQuestion() {
   actualResult = questions.question[startingQuestion].result;
-  // endingQuestion = questions.question.length;
+  endingQuestion = questions.question.length;
 
   isAllQuestionsAnswered();
 
@@ -215,6 +214,8 @@ window.onload = function () {
 
 //6. Final screen
 function summary() {
+  document.querySelector("#welcome").innerText = "Tus resultados, " + userName;
+
   document.querySelector("#game").style.display = "none";
   document.querySelector("#modal").style.display = "block";
 

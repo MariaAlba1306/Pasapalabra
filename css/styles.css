@@ -32,14 +32,12 @@ button {
   font-family: "Wallie";
 }
 .pasapalabra {
-  padding-top: 10%;
-  width: 100%;
-  height: 100%;
   background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/fondo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position: top;
+  border: solid 1px red;
 }
 h1,
 h2,
@@ -49,19 +47,23 @@ h3 {
 
 /*1st screen*/
 .startGame {
-  height: 100%;
+  /* background-color: #004b8d; */
+  height: 1500px;
+  width: 100%;
   text-align: center;
   color: white;
   font-family: "Wallie";
+  padding-top: 20px;
   background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/logo-borde.png");
   background-repeat: no-repeat;
   background-size: 70em;
   background-position: center;
   background-position: top;
-  padding-bottom: 400px;
+  background-position-y: 100px;
+  padding-top: 10px;
 }
 .startGame_title {
-  padding-top: 120px;
+  padding-top: 185px;
 }
 .nameBox {
   height: 30px;
@@ -69,17 +71,20 @@ h3 {
 }
 /*Final landing*/
 .modal {
+  height: 1500px;
+  width: 100%;
+  text-align: center;
   color: white;
-  text-align: center;
-  display: none;
-  padding-top: 120px;
-  text-align: center;
   font-family: "Wallie";
+  padding-top: 20px;
   background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/logo-borde.png");
   background-repeat: no-repeat;
   background-size: 70em;
   background-position: center;
   background-position: top;
+  background-position-y: 100px;
+  padding-top: 10px;
+  display: none;
 }
 .modal_title {
   padding-top: 120px;
@@ -88,18 +93,20 @@ h3 {
 /*Rosco screen*/
 
 .game {
+  height: 1500px;
   width: 100%;
-  height: 100%;
   text-align: center;
+  color: white;
   display: none;
   font-family: "Wallie";
-  color: white;
+  padding-top: 20px;
   background-image: url("https://atreslab.com/modulosblancos/static/roscos-pasapalabra/assets/logo-borde.png");
   background-repeat: no-repeat;
   background-size: 70em;
   background-position: center;
   background-position: top;
-  position: absolute;
+  background-position-y: 100px;
+  padding-top: 10px;
 }
 .timer {
   width: 100px;

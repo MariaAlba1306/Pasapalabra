@@ -1,4 +1,4 @@
-X<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,21 +11,22 @@ X<!DOCTYPE html>
   <body>
     <div class="pasapalabra">
      <div class="startGame" id="startGame">
-        <h1 class="startGame_title">¡Bienvenid@!</h1>
+        <h1 class="startGame_title">¡Hola! :) </h1>
           <p>Qué bien tenerte por aquí... Pero antes dinos, ¿cómo te llamas?</p>
             <input type="text" id="name" class="nameBox">
             <button onclick="InitialModal()">Empezar</button>
       </div>
       <div class="modal" id="modal">
-        <title class="modal_title" style="padding-top: 1000px;">¡Has acabado!</title>
-        <h2 class="" id="round"></h2>
+        <h1 class="startGame_title" id="welcome"></h1>
+      
+        <p class="" id="round"></p>
           <p class="" id="responsesok"></p>
           <p class="" id="responsesnull"></p>
           <p class="" id="responsesbad"></p> 
            <button onclick="restart()">Repetir</button> 
       </div>
       <div class="game" id="game">
-        <h1 class="startGame_title" id="welcome"></h1>
+                <h1 class="startGame_title" id="">Tiempo restante:</h1>
         <div class="timer"> 
          <span id="time">1:00</span> 
         </div>
