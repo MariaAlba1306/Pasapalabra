@@ -37,7 +37,6 @@ button {
   background-size: cover;
   background-position: center;
   background-position: top;
-  border: solid 1px red;
 }
 h1,
 h2,
@@ -88,7 +87,6 @@ h3 {
 }
 .modal_title {
   padding-top: 120px;
-  color: red;
 }
 /*Rosco screen*/
 
