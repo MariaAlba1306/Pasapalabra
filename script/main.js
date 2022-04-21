@@ -37,12 +37,13 @@ fetchQuestions();
 function fetchQuestions() {
   //retrieve json question
   fetch("./script/question.json")
-    .then((response) => response.json())
+    .then((response) => response.json(), { mode: "cors" })
     .then((data) => {
       questions = data;
       showQuestion();
     });
 }
+
 //3. Get user Response when clicking in send
 function getUserResponse() {
   //Get user response
